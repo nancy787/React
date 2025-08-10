@@ -13,7 +13,7 @@ function App() {
     authService.getCurrentUser()
       .then( (userData) => {
           if(userData) {
-            dispatch( login({userData}))
+            dispatch(login({userData}))
           }else {
             dispatch(logout())
           }
@@ -25,12 +25,12 @@ function App() {
 
   return !loading ? (
     <>
-     <div className="min-h-screen flex flex flex-wrap
+     <div className="min-h-screen flex flex-wrap
       content-between bg-gray-400">
         <div className='w-full block'>
               <Header/>
               <main>
-                todo
+               <Outlet /> 
               </main>
               <Footer/>
         </div>

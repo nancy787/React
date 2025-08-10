@@ -1,5 +1,5 @@
 import config from "../config/services";
-import { Client , ID, Storage } from "appwrite";
+import { Client, ID, Storage } from "appwrite";
 
 export class FileService{
     client = new Client();

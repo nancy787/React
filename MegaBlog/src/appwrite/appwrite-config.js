@@ -76,17 +76,17 @@ export class Service{
     }
 
     async getLists(){
-        try {
-            return await databases.listDocuments(
+        // try {
+            return await this.databases.listDocuments(
                 config.appwriteDatabaseId, 
                 config.appwriteCollectionId,[
                     Query.equal("status", "active")
                 ]
             )
-        } catch (error) {
-            console.log('failed to listing posts');
-            return false
-        }
+        // } catch (error) {
+        //     console.log('failed to listing posts');
+        //     return false
+        // }
     }
 }
 
