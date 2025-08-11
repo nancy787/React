@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import {useForm} from 'react-hook-form'
 import {Button, Input, RTE, Select} from '../index'
-import Service from '../../appwrite/appwrite-config'
 import fileService, { FileService } from '../../appwrite/files';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -18,6 +17,7 @@ function PostForm({post}) {
     })
     const navigate = useNavigate()
     const userData =  useSelector(state => state.auth.userData)
+    console.log("userData", userData);
     const submit = async(data) => {
         if(post) {
           const file = data.image[0] ? fileService.uploadFile(data.image[0]): null
@@ -34,19 +34,15 @@ function PostForm({post}) {
             navigate(`/post/${dbPost.$id}`)
           }
         }else{
-            const file = data.image[0];
-            if(file) {
-                const fileData = await fileService.uploadFile(file)
-                if(fileData){
-                    const fileId = fileData.$id
-                    data.feature_image = fileId
-                    const dbPost  = await Service.createPost({
-                        ...data,
-                        user_id:userData.$id
-                    })
-                    if(dbPost){
-                        navigate(`/post/${dbPost.$id}`)
-                    }
+            const file = await fileService.uploadFile(data.image[0]);
+            console.log("file", file);
+            if (file) {
+                const fileId = file.$id;
+                data.feature_image = fileId;
+                const dbPost = await service.createPost({ ...data, user_id: userData.$id });
+                console.log("userData", userData);
+                if (dbPost) {
+                    navigate(`/post/${dbPost.$id}`);
                 }
             }
         }
@@ -55,16 +51,15 @@ function PostForm({post}) {
     const slugTransform = useCallback( (value) => {
         if (value && typeof value == 'string')
             return value.trim().toLowerCase()
-                                .replace(/^[a-zA-z\d\s]+/g, '-')
-                                .replace(/\s/g, '-')
-            return ''
+                                .replace(/[^a-zA-Z\d\s]+/g, "-")
+                                .replace(/\s/g, "-");
+            return " ";
     }, [])
 
     React.useEffect( () => {
         const subscription = watch((value, {name}) => {
             if(name === 'title'){
-                setValue('slug', slugTransform(value.title, 
-                {shouldValidate :true}))
+                setValue('slug', slugTransform(value.title, {shouldValidate : true}))
             }
         })
         return() => {
@@ -73,9 +68,7 @@ function PostForm({post}) {
     }, [watch, slugTransform, setValue])
     return (
         <form
-        onSubmit={handleSubmit(submit)}
-        className="flex flex-wrap"
-        >
+        onSubmit={handleSubmit(submit)} className="flex flex-wrap" >
             <div className="w-2/3 px-2">
                 <Input
                     label="Title : "

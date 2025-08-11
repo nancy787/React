@@ -13,7 +13,7 @@ export class FileService{
 
     async uploadFile(file) {
         try {
-            await this.storage.createFile(
+           return  await this.storage.createFile(
                 config.appwriteBucketId,
                 ID.unique(),
                 file,
@@ -38,12 +38,13 @@ export class FileService{
     }
     
     getFilePreview(fileId) {
-        console.log("FileService.getFilePreview called with fileId:", fileId);
         try {
+            console.log("fileId", fileId);
             return this.storage.getFilePreview(
                 config.appwriteBucketId,
                 fileId
             )
+    
         } catch (error) {
             console.log('error in file preview', error);
         }
