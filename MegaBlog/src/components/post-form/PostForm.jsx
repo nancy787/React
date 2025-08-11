@@ -13,11 +13,11 @@ function PostForm({post}) {
             title : post ?.title ||  '',
             slug : post ?.slug ||'',
             content : post?.content || '',
-            status : post ?. status || '',
+            status : post ?. status || 'active',
         }
     })
     const navigate = useNavigate()
-    const userData =  useSelector(state => state.userData)
+    const userData =  useSelector(state => state.auth.userData)
     const submit = async(data) => {
         if(post) {
           const file = data.image[0] ? fileService.uploadFile(data.image[0]): null
@@ -73,7 +73,7 @@ function PostForm({post}) {
     }, [watch, slugTransform, setValue])
     return (
         <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(submit)}
         className="flex flex-wrap"
         >
             <div className="w-2/3 px-2">
@@ -129,7 +129,7 @@ function PostForm({post}) {
             >    
             </Select>
             <Button
-                type="Submit"
+                type="submit"
                 bgcolor={post ? "bg-green-500" : undefined}
                 className="w-full"
             >

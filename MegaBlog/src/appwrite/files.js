@@ -38,6 +38,7 @@ export class FileService{
     }
     
     getFilePreview(fileId) {
+        console.log("FileService.getFilePreview called with fileId:", fileId);
         try {
             return this.storage.getFilePreview(
                 config.appwriteBucketId,

@@ -62,31 +62,33 @@ export class Service{
         }
     }
     
-    async getPosts(slug) {
-        try {
-            return await databases.getDocument(
+    async getPost(slug) {
+        // try {
+            console.log(slug);
+            return await this.databases.getDocument(
                 config.appwriteDatabaseId, 
                 config.appwriteCollectionId,
                 slug
             )
-        } catch (error) {
-            console.log('failed to getting posts');
-            return false
-        }
-    }
-
-    async getLists(){
-        // try {
-            return await this.databases.listDocuments(
-                config.appwriteDatabaseId, 
-                config.appwriteCollectionId,[
-                    Query.equal("status", "active")
-                ]
-            )
         // } catch (error) {
-        //     console.log('failed to listing posts');
+        //     console.log('failed to getting posts');
         //     return false
         // }
+    }
+
+    async getPosts(queries = [Query.equal("status", "active")]){
+        try {
+            return await this.databases.listDocuments(
+                config.appwriteDatabaseId,
+                config.appwriteCollectionId,
+                queries,
+                
+
+            )
+        } catch (error) {
+            console.log("Appwrite serive :: getPosts :: error", error);
+            return false
+        }
     }
 }
 

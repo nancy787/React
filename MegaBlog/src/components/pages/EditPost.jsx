@@ -10,7 +10,7 @@ export default function EditPost() {
 
     useEffect( () => {
         if(slug) {
-            service.getPosts(slug).then((post) => {
+            service.getPost(slug).then((post) => {
                 if(post){
                     setPost(post)
                 }
