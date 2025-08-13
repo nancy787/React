@@ -1,49 +1,13 @@
-import React, {useState, useId} from "react";
+import React, {useState, useContext} from "react";
 import ShowData from "../components/ShowData";
+import ItemContext from "../context/ItemContext";
 
 function Form() {
-
-let [name, setName] = useState('');
-let [password, setPassword] = useState("");
-let [item, setItem]  = useState( [] )
-
-// function handleSubmit(e) {
-//     e.preventDefault();
-//     if(name === '' || password === '') {
-//         alert(`Name And password is requridd`)
-//         return;
-//     }
-//     alert(`Hello: ${name} your  Password is: ${password}`)
-// }
-
-// store data
-function handleSubmit(e) {
-    e.preventDefault()
-    if(name === '' || password === '') {
-        alert(`Name And password is requridd`)
-        return;
-    }
-    
-    const newitem = {name, password}
-    console.log(newitem);
-    setItem([...item, newitem]);
-    setName('')
-    setPassword('')
-
-    // setItem({name, password})
-// it resets with refereshes
-}
-
-const handleClear = () => {
-    setName('')
-    setPassword('')
-    setItem([])
-}
-
+const { name, setName, password, setPassword, id, setId, editId, setEditId, item, setItem , handleSubmit, handleDelete, handleUpdate, handleClear } = useContext(ItemContext);
     return(
         <div className="w-full">
-            <div className="text-center" ></div>
-            <form 
+            <div className="text-center"></div>
+            <form
                 onSubmit={handleSubmit}
                 className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
             >
@@ -78,7 +42,7 @@ const handleClear = () => {
             <div className="flex items-center justify-between">
             <button type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                Sign In
+             {editId ? 'Update' : 'Add'}
             </button>
             <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                 Forgot Password?
@@ -89,7 +53,7 @@ const handleClear = () => {
                 &copy;2020 Acme Corp. All rights reserved.
             </p>
             <div>
-                <ShowData items={item}/>
+                <ShowData items={item} handleDelete={handleDelete} handleUpdate={handleUpdate}/>
             </div>
             <button type="button" 
                 onClick={handleClear}

@@ -4,13 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Form from './components/Form'
 import Container from './components/container/Container'
+import ItemContextProvider from './context/ItemContextProvider'
 
 function App() {
 
   return (
-    <Container>
-      <Form/>
-    </Container>
+    <ItemContextProvider>
+      <Container>
+        <Form/>
+      </Container>
+    </ItemContextProvider>
   )
 }
 
