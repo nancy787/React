@@ -1,7 +1,14 @@
-import React,{useEffect} from "react";
+import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {deleteItem, setEditItem} from '../stores/ItemSlice'
 
-export default function ShowData({ items, handleDelete, handleUpdate}) {
-    return (
+export default function ShowData() {
+
+  const items = useSelector(state => state.item.items)
+  console.log(items);
+  const dispatch = useDispatch()
+
+    return items && (
         <ul>
           {items.map((i, idx) => (
             <div className="nth-of-type-4:underline">
@@ -21,10 +28,10 @@ export default function ShowData({ items, handleDelete, handleUpdate}) {
                       <td className="px-3">{i.name}</td>
                       <td className="px-3">{i.password}</td>
                       <td className="px-3">
-                        <button onClick={ () => handleDelete(i.id)}>Delete</button>
+                        <button onClick={ () => dispatch(deleteItem(i.id)) }>Delete</button>
                       </td>
                       <td className="px-3">
-                        <button onClick={ () => handleUpdate(i)}>Update</button>
+                        <button onClick={ () => dispatch(setEditItem(i))}>Update</button>
                       </td>
                     </tr>
                   </tbody> 

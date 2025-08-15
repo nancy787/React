@@ -5,16 +5,19 @@ import './App.css'
 import Form from './components/Form'
 import Container from './components/container/Container'
 import ItemContextProvider from './context/ItemContextProvider'
+import { Provider } from 'react-redux'
+import store from './stores/store'
 
 function App() {
 
   return (
-    <ItemContextProvider>
+    <Provider store={store}>
       <Container>
         <Form/>
       </Container>
-    </ItemContextProvider>
+    </Provider>
   )
 }
 
 export default App
+
