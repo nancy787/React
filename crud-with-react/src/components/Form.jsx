@@ -78,7 +78,7 @@ function Form() {
                 <ShowData/>
             </div>
             <button type="button" 
-               onClick={(e) => dispatch(resetItem())}
+                onClick={(e) => dispatch(resetItem())}
                 className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
             >
                 clearForm

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+*{
+    font-family: 'Eczar', serif;
+}
+
+.WorkSans{
+    font-family: 'Work Sans', sans-serif;
+}
