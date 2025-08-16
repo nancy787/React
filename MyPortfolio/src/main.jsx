@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import {Home, Contact, About, Nav, Work}  from './pages/index'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import "./i18n";
 
 const router = createBrowserRouter(
   createRoutesFromElements (

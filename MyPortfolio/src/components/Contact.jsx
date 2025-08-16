@@ -2,14 +2,15 @@ import React from "react";
 import { ButtonMailto, SocialLinks} from "../pages/index";
 import  Resume  from "../../public/nancy_kumari_resume.pdf";
 import contactMeImg from "../assets/contact_me.png";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
-
+  const { t } = useTranslation();
     return(
         <section className="container mx-auto py-10 px-6 bg-[#FFEED9]">
         <div className="relative mb-12 flex justify-center items-center">
           <h1 className="text-gray-900 text-4xl sm:text-5xl md:text-6xl font-bold relative z-10 text-center">
-            Let&apos;s Connect
+            {t("contact.title")}
           </h1>
           <img
             src={contactMeImg}
@@ -51,7 +52,7 @@ function Contact() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 focus-visible:ring ring-[#4E5E80]  border-[#4E5E80] border-2 text-sm md:text-base font-semibold text-[#4E5E80] text-center rounded-lg outline-none transition duration-100 px-[5rem] py-2"
                   >
-                    View Resume
+                    {t("contact.btn_resume")}
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-5 w-5" 

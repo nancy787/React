@@ -1,5 +1,6 @@
 import {Link, NavLink} from "react-router-dom"
 import girlImage from '../assets/girl.png';
+import {LanguageSelector} from "../pages/index";
 
 function Header () {
     return (
@@ -17,7 +18,8 @@ function Header () {
                     className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
                     id="mobile-menu-2"
                 >
-                    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <ul className="flex flex-c
+                    ol mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <NavLink to ="/"
                             className={ ( {isActive}) => 
@@ -62,6 +64,7 @@ function Header () {
                                 Work
                             </NavLink>
                         </li>
+                        <LanguageSelector/>
                     </ul>
                 </div>
             </div>

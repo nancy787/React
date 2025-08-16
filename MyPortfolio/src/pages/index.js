@@ -8,6 +8,7 @@ import Work from "../components/Work";
 import Footer from "../layouts/Footer";
 import ButtonMailto from "../components/ButtonMailTo";
 import SocialLinks  from "../components/SocialLinks";
+import LanguageSelector from "../components/LanguageSelecter";
+import VideoCard from "../components/VideoCard";
 
-
-export {Home, Contact, About, Header, Nav, Work, Footer, ButtonMailto, SocialLinks};
+export {Home, Contact, About, Header, Nav, Work, Footer, ButtonMailto, SocialLinks, LanguageSelector, VideoCard};

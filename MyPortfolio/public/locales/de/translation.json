@@ -1,0 +1,54 @@
+{
+  "home": {
+    "wave" : "Hallo zusammen",
+    "name" : "Ich bin Nancy Kumari,",
+    "title": "Ein Softwareentwickler",
+    "description": "(PHP | Laravel | Symfony | MySQL | React)",
+    "btn_email" : "Kontaktieren Sie uns",
+    "btn_resume" : "Lebenslauf ansehen",
+    "introduction" : "Meine Einführung",
+    "video" : "Video-Lebenslauf"
+  },
+  "about": {
+    "title": "Über mich",
+    "heading" : "Ein bisschen über mich",
+    "description": "“Ich bin Softwareentwickler mit über drei Jahren Erfahrung im Design und der Entwicklung skalierbarer Webanwendungen. Meine Expertise liegt in der Backend-Entwicklung mit PHP, Laravel und Symfony, wo ich intensiv an API-Integrationen, Abonnementsystemen und Performance-Optimierung gearbeitet habe. Ich verfüge außerdem über umfassende Erfahrung im Datenbankdesign und -management mit MySQL und PostgreSQL und sorge so für eine effiziente und zuverlässige Datenverarbeitung. Im Frontend entwickle ich gerne benutzerfreundliche und reaktionsschnelle Oberflächen mit React. Ich schreibe leidenschaftlich gerne sauberen, wartungsfreundlichen Code und liefere Lösungen, die technische Präzision mit realen Geschäftsanforderungen in Einklang bringen.”"
+  },
+  "work": {
+    "title" : "Meine Arbeit",
+    "projects" : [
+      {
+        "title": "Bebaan Recruitment",
+        "description": "Bebaan Recruitment ist eine schnell wachsende Recruiting- und Business-Plattform, die die Lücke zwischen Arbeitssuchenden und Unternehmen schließt. Die Plattform ermöglicht es Kandidaten, detaillierte Profile zu erstellen, sich auf Stellen zu bewerben und direkt mit Arbeitgebern zu kommunizieren. Unternehmen können Stellenanzeigen veröffentlichen, Bewerbungen verwalten und geeignete Kandidaten effizient in die engere Auswahl nehmen. Die Plattform ist auf Skalierbarkeit und Benutzerfreundlichkeit ausgelegt und unterstützt außerdem sichere Benutzerauthentifizierung, Echtzeitbenachrichtigungen und integriertes Messaging für einen optimierten Einstellungsprozess.",
+        "tech_stack": "PHP, Laravel, MySQL, Vuejs",
+        "Features": "Privat- und Gruppenchats, Benachrichtigungen, Mitgliederverwaltung.",
+        "view": "https://www.bibaan.net/",
+        "link": "https://github.com/nancy787/admin.bibaan.net"
+    },
+    {
+      "title" : "Rox Tickets",
+      "description" : "Rox Tickets ist eine hybride mobile Anwendung für den Kauf und Verkauf von Tickets für Fitnessrennen und Sportveranstaltungen weltweit. Die Plattform bietet Sportlern und Veranstaltern einen sicheren Marktplatz für Ticketverkäufe, Registrierungsverfolgung und reibungslose Zahlungsabwicklung. Integrierte Stripe-Webhooks unterstützen die Echtzeit-Zahlungsabwicklung und automatisierte Benachrichtigungen und sorgen so für ein reibungsloses Benutzererlebnis für Käufer und Verkäufer.",
+      "tech_stack" : "PHP, Laravel, MySQL, javascript, Ajax, jquery, Stripe Webhooks. Freshchat, Firebase, React Native (hybrid app)",
+      "view" : "https://apps.apple.com/in/app/rox-tickets/id6736522829"
+    },
+    {
+          "title" : "Persönliches Portfolio",
+          "description" : "Eine persönliche Portfolio-Website, die meine Fähigkeiten, Projekte und Berufserfahrung als Softwareentwickler präsentiert. Die Website zeichnet sich durch ein klares und responsives Design aus und ist geräteübergreifend zugänglich. Sie präsentiert Projektfallstudien, technisches Fachwissen und ein integriertes Kontaktformular, das potenziellen Arbeitgebern und Partnern die Kontaktaufnahme erleichtert. Das Portfolio ist für Performance und SEO optimiert und bietet eine schnelle, professionelle und ansprechende Benutzererfahrung.",
+          "view"  : "#",
+          "tech_stack" : "React, tailwindCss",
+          "link" : "https://github.com/nancy787/React/tree/master/MyPortfolio"
+    },
+    {
+      "title" : "Online-Lebensmittellieferung",
+      "description" : "Eine Webanwendung für Online-Essenslieferungen, mit der Nutzer Restaurants durchsuchen, Menüs erkunden, Bestellungen aufgeben und sichere Online-Zahlungen tätigen können. Die Plattform unterstützt Echtzeit-Bestellverfolgung, Restaurantverwaltung und Kundenbenachrichtigungen für ein reibungsloses Bestellerlebnis.",
+      "tech_stack" : "PHP, MySQL, Paypal Webhooks",
+      "link" : "https://github.com/nancy787/Online_Food_Delivery",
+      "view" : "#"
+    }
+    ]
+  },
+  "contact" : {
+    "title" : "Verbinden wir uns",
+    "btn_resume" : "Lebenslauf ansehen"
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "home": {
+      "wave" : "Hello All",
+      "name" : "I'm Nancy Kumari,",
+      "title": "A Software Developer",
+      "description": "(PHP | Laravel | Symfony | MySQL | React)",
+      "btn_email" : "Get In Touch",
+      "btn_resume" : "View Resume",
+      "introduction" : "My introduction",
+      "video" : "Introduction"
+    },
+    "about": {
+      "title": "About",
+      "heading" : "A Little Bit About Me",
+      "description": "“I am a software developer with over 3 years of experience designing and building scalable web applications. My expertise lies in backend development using PHP, Laravel and Symfony, where I have worked extensively on API integrations, subscription systems, and performance optimization. I am also skilled in database design and management with MySQL,Postgresql, ensuring efficient and reliable data handling. On the frontend, I enjoy creating user-friendly and responsive interfaces with React. I am passionate about writing clean, maintainable code and delivering solutions that balance technical precision with real business needs..”"
+    },
+    "work": {
+      "title": "My Work",
+      "projects" : [
+        {
+          "title" :"Bebaan Recruitment",
+          "description" : "Bebaan Recruitment is a fast-growing recruitment and business platform that bridges the gap between job seekers and companies. The platform enables candidates to create detailed profiles, apply for positions, and communicate directly with employers, while companies can post job listings, manage applications, and shortlist suitable candidates efficiently. Designed for scalability and ease of use, the platform also supports secure user authentication, real-time notifications, and integrated messaging to streamline the hiring process.",
+          "tech_stack" : "PHP, Laravel, MySQL, Vuejs",
+          "Features" : "private & group chats, notifications, member management.",
+          "view" : "https://www.bibaan.net/",
+          "link" : "https://github.com/nancy787/admin.bibaan.net"
+      },
+      {
+        "title" : "Rox Tickets",
+        "description" : "Rox Tickets is a hybrid mobile application designed for buying and selling tickets to fitness races and sporting events worldwide. The platform provides athletes and event organizers with a secure marketplace to manage ticket sales, track registrations, and handle payments seamlessly. With integrated Stripe webhooks, it supports real-time payment processing and automated notifications, ensuring a smooth user experience for both buyers and sellers.",
+        "tech_stack" : "PHP, Laravel, MySQL, javascript, Ajax, jquery, Stripe Webhooks. Freshchat, Firebase, React Native (hybrid app)",
+        "view" : "https://apps.apple.com/in/app/rox-tickets/id6736522829"
+      },
+      {
+            "title" : "Personal portfolio",
+            "description" : "A personal portfolio website built to showcase my skills, projects, and professional experience as a software developer. The site features a clean and responsive design, ensuring accessibility across devices. It highlights project case studies, technical expertise, and an integrated contact form, making it easier for potential employers and collaborators to connect. Optimized for performance and SEO, the portfolio is designed to provide a fast, professional, and engaging user experience.",
+            "view"  : "#",
+            "tech_stack" : "React, tailwindCss",
+            "link" : "https://github.com/nancy787/React/tree/master/MyPortfolio"
+      },
+      {
+        "title" : "Onlne Food Delivery",
+        "description" : "An online food delivery web application that allows users to browse restaurants, explore menus, place orders, and make secure online payments. The platform supports real-time order tracking, restaurant management, and customer notifications for a seamless food ordering experience.",
+        "tech_stack" : "PHP, MySQL, Paypal Webhooks",
+        "link" : "https://github.com/nancy787/Online_Food_Delivery",
+        "view" : "#"
+      }
+      ]
+    },
+    "contact" : {
+      "title" : "Let's Connect",
+      "btn_resume" : "View Resume"
+    }
+  }
+  
