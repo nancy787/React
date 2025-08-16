@@ -1,4 +1,6 @@
 import React from "react";
+import CodingGirl from "../assets/coding_girl.png";
+
 export default function About() {
 
 const AboutData = [
@@ -6,21 +8,18 @@ const AboutData = [
       sortDescription:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et risus sapien. Aliquam tempus sapien non laoreet posuere.      ",
       description:
-        "I have been waiting. I've been waiting all day. Waiting for Gus to send one of his men to kill me. And it's you. Who do you know, who's okay with using children, Jesse? Who do you know… who's allowed children to be murdered… hmm? Gus! He has, he has been ten steps ahead of me at every turn.",
+        "“I am a software developer with over 3 years of experience designing and building scalable web applications. My expertise lies in backend development using PHP, Laravel and Symfony, where I have worked extensively on API integrations, subscription systems, and performance optimization. I am also skilled in database design and management with MySQL,Postgresql, ensuring efficient and reliable data handling. On the frontend, I enjoy creating user-friendly and responsive interfaces with React. I am passionate about writing clean, maintainable code and delivering solutions that balance technical precision with real business needs..”",
     },
   ];
 
     return (
-        <div className="bg-[#FFDDBF] pt-[2rem]">
         <div className="container w-full mx-auto flex flex-wrap justify-between ">
           <div className="flex flex-col items-start justify-center max-w-lg  px-[30px]">
             <h1 className="text-5xl font-bold  text-left">
               A Little Bit About Me
             </h1>
-            <p className="text-md my-5 WorkSans">
-              {AboutData[0].sortDescription}
-            </p>
-            <p className="text-md WorkSans">{AboutData[0].description}</p>
+
+            <p className="text-md WorkSans my-5 WorkSans">{AboutData[0].description}</p>
   
             <a
               href="/contact"
@@ -32,11 +31,10 @@ const AboutData = [
   
           <div className="flex flex-col items-center  justify-center ">
             <img
-              src="/Frame.png"
-              className="md:h-[30rem] sm:w-[27rem] px-[5rem] sm:px-0"
+              src={CodingGirl}
+              className="md:h-[30rem] sm:w-[30rem] px-[5rem] sm:px-0"
             />
           </div>
         </div>
-      </div>
     ) 
 }
